@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Piedra,Papel O Tijera</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="css.css">
+    <script src="juego.js"></script>
+
+</head>
+
+<body>
+    <header class="header"> <!-- Contenedor de header -->
+        <div class="container">
+            <h1 class="head">Rock | Paper | Scissors</h1>
+            <h3 class="caption">Play against the machine</h3>
+        </div>
+        <div>
+            <h2 class="option">Choose an option</h2>
+        </div>
+    </header>
+    <div class="page-container">
+        <div class="hands-container"> <!-- Contenedor universal -->
+            <div class="hands-left-container">
+                <div class="hand" id="hand-computer">
+                    <span class="hand-title">Computer</span>
+                    <span class="icon">✊</span> <!-- mano computadora -->
+                </div>
+                <span id="vs-text">VS</span>
+                <div class="hand" id="hand-user">
+                    <span class="hand-title">User</span>
+                    <span class="icon" >✊</span> <!-- mano usuario -->
+                </div>
+            </div>
+            <div class="hands-right-container">
+                <button class="hand_choice" onclick="playGame(rock)">
+                    <span class="choice">✊</span>
+                    <span class="choice-title">Rock</span>
+                </button> <!-- Icono para la opción "roca"-->
+                <button class="hand_choice" onclick="playGame(paper)">
+                    <span class="choice">🖐️</span>
+                    <span class="choice-title">Paper</span>
+                </button> <!-- Icono para la opción "papel" -->
+                <button class="hand_choice" onclick="playGame(scissors)">
+                    <span class="choice">✌</span>
+                    <span class="choice-title">Scissors</span>
+                </button> <!-- Icono para la opción "tijera"-->
+            </div>
+        </div>
+        <!-- Mensaje contenedor -->
+        <h2 class="result" id="result"></h2>
+    </div>
+    <footer class="footer">
+        <p class="caption">All rights reserved - Tatiana Valencia. <span id="date"></span></p>
+        <h3 class="caption">Rock | Paper | Scissors</h3>
+    </footer>
+</body>
+
+</html>

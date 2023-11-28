@@ -1,0 +1,204 @@
+html, body {
+    font-family: 'Josefin Sans', sans-serif;
+    margin: 0; /* Asegura que no haya margen en el cuerpo ni en el html */
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+.page-container {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+ }
+.container{
+    background-color: rgb(106, 168, 248);
+    padding: 0.2rem;
+}
+.caption {
+    text-align: center;
+}
+
+.footer{    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(106, 168, 248);
+} 
+.head,
+.paragraph,
+.option{
+    display: flex;
+    justify-content: center;
+}
+.head {
+    font-weight: 400;
+    color: azure;
+}
+.paragraph {
+    font-size: 3rem;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.hands-container{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.hands-right-container{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.option {
+    text-transform: uppercase;
+    padding: 1rem;
+    background-color: azure;
+    text-align: center;
+    margin: 2rem 5rem;
+}
+
+
+/* Media query para pantallas más pequeñas */
+@media only screen and (max-width: 1024px) { /* Scren (dispositivo de visualización) Only (solo) */
+    .head {
+        font-size: 2rem; 
+    }
+
+    #vs-text{
+        font-size: 2rem;
+        color: red;
+        font-weight: bold;
+    }
+
+    .paragraph {
+        font-size: 2rem; 
+    }
+
+    .hands-container {
+        flex-direction: column; 
+    }
+    .hands-left-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .hand_choice .choice{
+        font-size: 3rem;
+    }
+
+    .hand_choice{
+        border: none;
+        border-radius: 1rem;
+        padding-top: 1rem;
+    }
+    .hand{
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .hand-title{
+        text-align: center;
+        font-size: 2rem;
+        
+    }
+    .icon{
+        font-size: 10rem; 
+        display: flex;
+        justify-content: center;
+    } 
+
+    .hands-right-container {
+        align-items: center; 
+        text-align: center; 
+        display: block;
+        
+    }
+    
+}
+
+@media only screen and (min-width: 1025px) { /* Scren (dispositivo de visualización) Only (solo) */
+    .hand_choice .choice{
+        font-size: 5rem;
+    }
+
+    #vs-text{
+        font-size: 3rem;
+        color: red;
+        font-weight: bold;
+    }
+
+    .hand_choice{
+        border: none;
+        border-radius: 1rem;
+        padding-top: 1rem;
+    }
+
+    .hand{
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .hand-title{
+        font-size: 3rem;
+        
+    }
+
+    .icon{
+        font-size: 20rem; 
+    } 
+
+    .hands-left-container {
+        /* margin-left: 2rem; */
+        display: flex;
+        justify-items: center;
+        align-items: center;
+        font-size: 20rem;
+        
+        /* margin: 1rem 15rem; */
+    }
+    
+}
+
+.hand #user, #computer {
+    align-items: start;
+    /* animation: handTransform 2s infinite; */
+}
+@keyframes handTransform {
+    0%, 100% { transform: rotate(10deg); }
+    50% { transform: rotate(-10deg); }
+}
+
+
+
+span {
+    font-size: large;
+    display: flex;
+    justify-content: center;
+
+}
+.result {
+    text-align: center;
+    font-size: 4rem;
+}
+/* Selecciona el estado de "hover" (cuando el mouse está sobre el botón) para aplicar 
+reglas de estilo específicas.
+*/
+.hand_choice:hover {
+    cursor: pointer;
+    background-color: rgb(179, 175, 175);
+}
+
